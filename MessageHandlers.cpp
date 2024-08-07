@@ -2,16 +2,16 @@
 #include "WiFiConfig.h"
 #include <map>
 #include <functional>
-
-String disNombre = "Piso";
+#include "Config.h"
 
 void handleIsConnect(WiFiClient& client) {
     Serial.println("Cliente conectado");
 }
 
 void handleGetName(WiFiClient& client) {
-    client.println("nombre: " + disNombre);
-    Serial.println("Mensaje enviado: nombre: " + disNombre);
+    String response = String("nombre: ") + NAME_DEVICE;
+    client.println(response);
+    Serial.println("Mensaje enviado: nombre: " + response);
 }
 
 void handleActivated(WiFiClient& client) {

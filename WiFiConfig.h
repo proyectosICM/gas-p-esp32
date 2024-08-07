@@ -4,6 +4,7 @@
 #include <WiFi.h>
 #include <WiFiClient.h>
 #include <WiFiServer.h>
+#include "Config.h"
 
 void setupWiFi();
 WiFiServer& getServer();

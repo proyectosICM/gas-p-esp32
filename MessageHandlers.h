@@ -5,6 +5,7 @@
 #include <WiFiClient.h>
 #include <map>
 #include <functional>
+#include "Config.h"
 
 void handleClient();
 void handleIsConnect(WiFiClient& client);
